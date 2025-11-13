@@ -1,4 +1,4 @@
 venv
 .idea
 **__pycache__
-cheese_catalog.db
+proj_db.db

@@ -1,19 +1,26 @@
 # FastAPI async SQL
 
-Code for Project used in videos for FastAPI.
+## Description:
+A fully asynchronous FastAPI application using **async SQLAlchemy** and **async Alembic** for database access and migrations.
 
-## Theory:
 
-- [Code used in videos](https://github.com/mate-academy/fastapi-async-sql-project)
-- [Pydantic](https://docs.pydantic.dev/latest/)
-- [Dependency Injection](https://fastapi.tiangolo.com/tutorial/dependencies/)
-- [Project Structure](https://fastapi.tiangolo.com/tutorial/bigger-applications/)
-- [Async / await FastAPI](https://fastapi.tiangolo.com/async/)
-- [Async SQL support](https://fastapi.tiangolo.com/advanced/async-sql-databases/)
+Endpoints:
+1. Create Cheese Type endpoint
+2. List all possible Cheese Types endpoint
+3. Create Cheese endpoint
+4. List all Cheese endpoint (with filter by packing type & by cheese type)
+5. Detail Cheese endpoint
+6. Create Note endpoint
+7. List all Notes endpoint
+8. Complete Note endpoint
 
-## Useful links:
-- [FastAPI best-practices](https://github.com/zhanymkanov/fastapi-best-practices)
-- [SQLAlchemy Async Docs](https://docs.sqlalchemy.org/en/20/orm/extensions/asyncio.html)
-- [FastAPI lib for working with users](https://github.com/fastapi-users/fastapi-users)
-- [Full-stack FastAPI boilerplate](https://github.com/tiangolo/full-stack-fastapi-postgresql)
+Stack:
+1. FastAPI (Web framework)
+2. SQLAlchemy (ORM) 
+3. Pydantic (Validation, Serialization)
+4. Alembic (Migrations handling)
 
+## How to run:
+1. `pip install -r requirements.txt`
+2. `alembic upgrade head`
+3. `uvicorn main:app --reload`

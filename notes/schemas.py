@@ -1,12 +1,16 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 
-class NoteIn(BaseModel):
+class NoteBase(BaseModel):
     text: str
-    completed: bool
+    completed: bool | None = False
 
 
-class Note(BaseModel):
+class NoteCreate(NoteBase):
+    pass
+
+
+class Note(NoteBase):
+    model_config = ConfigDict(from_attributes=True)
+
     id: int
-    text: str
-    completed: bool

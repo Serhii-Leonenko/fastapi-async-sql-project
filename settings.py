@@ -1,10 +1,10 @@
-from pydantic.v1 import BaseSettings
+from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
     PROJECT_NAME: str = "FastAPI in Details"
 
-    DATABASE_URL: str | None = "sqlite+aiosqlite:///./cheese_catalog.db"
+    DATABASE_URL: str | None = "sqlite+aiosqlite:///./proj_db.db"
 
     class Config:
         case_sensitive = True
