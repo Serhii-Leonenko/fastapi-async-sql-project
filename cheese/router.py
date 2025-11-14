@@ -2,11 +2,10 @@ from typing import Annotated
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy.orm import Session
 
 from dependencies import get_db
-from . import schemas, crud
-from .enums import PackagingType
+from cheese import schemas, crud
+from cheese.enums import PackagingType
 
 router = APIRouter()
 
